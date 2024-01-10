@@ -34,7 +34,7 @@ class HotelImages(BaseModel):
 class HotelBooking(BaseModel):
     hotel=models.ForeignKey(Hotel,related_name='hotel_booking', on_delete=models.CASCADE)
     user=models.ForeignKey(User,related_name='user_booking', on_delete=models.CASCADE)
-    start_at=models.DateField()
-    end_at=models.DateField()
+    start_date=models.DateField()
+    end_date=models.DateField()
     booking_type=models.CharField(choices=(('Pre Book','Pre Book'),('Post Book','Post Book')),max_length=180)
 
